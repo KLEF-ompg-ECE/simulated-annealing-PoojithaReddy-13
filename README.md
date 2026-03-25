@@ -22,23 +22,17 @@ Open sa_timetable.py and read through it. Then answer these questions.
 
 Q1. What does count_clashes() measure? What value means a perfect timetable?
 
-[ count_clashes() measures the number of conflicts in the timetable, i.e., how many exams are scheduled in the same time slot for students who have overlapping subjects.
-
-A perfect timetable has 0 clashes, meaning no student has two exams at the same time. ]
+[count_clashes() measures the number of conflicts in the timetable, i.e., how many exams are scheduled in the same time slot for students who have overlapping subjects. A perfect timetable has 0 clashes, meaning no student has two exams at the same time.]
 
 Q2. What does generate_neighbor() do? How is the new timetable different from the current one?
 
-[generate_neighbor() creates a new timetable by making a small change to the current one, usually by moving a subject to a different time slot.
-
-This produces a slightly different timetable that can either improve or worsen the number of clashes, helping the algorithm explore possible solutions.]
+[generate_neighbor() creates a new timetable by making a small change to the current one, usually by moving a subject to a different time slot. This produces a slightly different timetable that can either improve or worsen the number of clashes, helping the algorithm explore possible solutions.]
 
 Q3. In run_sa(), there is this line:
 if delta < 0 or random.random() < math.exp(-delta / T):
 What does this line decide? Why does SA sometimes accept a worse solution?
 
-[This line decides whether to accept the new solution. If the new solution is better (delta < 0), it is always accepted. If it is worse, it may still be accepted with a certain probability.
-
-Simulated Annealing accepts worse solutions to avoid getting stuck in local minima and to explore more possible solutions, especially at higher temperatures.]
+[This line decides whether to accept the new solution. If the new solution is better (delta < 0), it is always accepted. If it is worse, it may still be accepted with a certain probability. Simulated Annealing accepts worse solutions to avoid getting stuck in local minima and to explore more possible solutions, especially at higher temperatures.]
 
 ---
 
@@ -57,21 +51,16 @@ Fill in this table:
 | Did SA reach 0 clashes? (Yes / No) |No |
 
 Copy the printed timetable output here:
-[ Final Timetable
-------------------------------------------
-  Slot 1:  Geography
-  Slot 2:  Chemistry, English
-  Slot 3:  History, Computer Science, Economics
-  Slot 4:  Biology, Statistics
-  Slot 5:  Mathematics, Physics
-------------------------------------------
-  Total clashes : 3]
+[Final Timetable: 
+Slot 1: Geography; 
+Slot 2: Chemistry, English; 
+Slot 3: History, Computer Science, Economics; 
+Slot 4: Biology, Statistics; 
+Slot 5: Mathematics, Physics; Total clashes: 3]
 
 Look at plots/experiment_1.png and describe what you see (2–3 sentences).  
 *Where does the biggest drop in clashes happen? Does the curve flatten out?*
-[ The plot shows a sharp decrease in clashes during the initial iterations, indicating rapid improvement at the beginning. 
-
-After that, the curve gradually flattens, showing that the algorithm stabilizes and makes only small improvements as it approaches a near-optimal solution.]
+[The plot shows a sharp decrease in clashes during the initial iterations, indicating rapid improvement at the beginning. After that, the curve gradually flattens, showing that the algorithm stabilizes and makes only small improvements as it approaches a near-optimal solution.]
 
 ---
 
