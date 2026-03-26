@@ -1,9 +1,9 @@
 # Assignment 1 — Simulated Annealing: Exam Timetable Scheduling
 ## Observation Report
 
-Student Name  : Masannagari Gayathri  
-Student ID    : 2310040064
-Date Submitted: 25-03-2026  
+Student Name  : Palugulla Poojitha  
+Student ID    : 2310040039
+Date Submitted: 26-03-2026  
 
 ---
 
